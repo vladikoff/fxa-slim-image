@@ -38,7 +38,7 @@ RUN set -x \
 	&& apt-get purge -y --auto-remove $buildDeps \
 	&& rm -rf /usr/src/python
 
-RUN buildDeps='build-essential libgmp3-dev graphicsmagick git' \
+RUN buildDeps='build-essential libgmp3-dev graphicsmagick git wget nano curl' \
 	&& set -x \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
